@@ -17,7 +17,7 @@ function(input, output) {
   output$stressPlot <- renderPlot({
     ggplot(df[[input$wordType]][df[[input$wordType]][["frequency"]]>=input$range[1]&df[[input$wordType]][["frequency"]]<=input$range[2],], 
            aes(stressPosition)) + geom_bar(aes(fill=syllableNumber))+facet_wrap(~ syllableNumber)+
-      xlab("Stress position")+ylab("Count")+theme(legend.position="none")
+      xlab("Stress position")+ylab("Count")+theme(legend.position="none")+ggtitle(paste("Word stress distribution for", input$wordType))
     
     # Render a barplot
 

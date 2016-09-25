@@ -14,7 +14,10 @@ fluidPage(
                   choices=c("All","Adjective","Noun","Verb")),
          
       sliderInput("range", "Word frequency range:",
-                  min=0, max=5000, value=c(1,1000))
+                  min=0, max=5000, value=c(1,1000)),
+      hr(),
+      helpText("Use the dropdown menu and slider to restrict analysis to a certain word type and frequency range.")
+      
     ),
     
     # Create a spot for the barplot
